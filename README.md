@@ -2,9 +2,9 @@
 
 ## Learning Goals
 
-* Practice writing `if...else if...else` statements.
-* Practice working with the ternary operator.
-* Practice writing `switch` statements.
+- Practice writing `if...else if...else` statements.
+- Practice working with the ternary operator.
+- Practice writing `switch` statements.
 
 ## Introduction
 
@@ -24,10 +24,10 @@ being said, reading the tests can often provide important clues on how to
 complete a lab. Let's take a look at the first test for this lab together:
 
 ```js
-describe('index.js', function () {
-  describe('scuberGreetingForFeet()', function () {
-    it('gives customers a free sample if the ride is less than or equal to 400 feet', function () {
-      expect(scuberGreetingForFeet(199)).to.equal('This one is on me!');
+describe("index.js", function () {
+  describe("scuberGreetingForFeet()", function () {
+    it("gives customers a free sample if the ride is less than or equal to 400 feet", function () {
+      expect(scuberGreetingForFeet(199)).to.equal("This one is on me!");
     });
 
     // tests continue...
@@ -44,7 +44,7 @@ being executed with `199` passed through as an argument to the function.
 Executing the `scuberGreetingForFeet` function with the argument should return
 `"This one is on me!"`.
 
-We will tackle the details of function writing in depth in an upcoming lab. For 
+We will tackle the details of function writing in depth in an upcoming lab. For
 now, briefly, a function declaration is written like so:
 
 ```js
@@ -53,15 +53,15 @@ function addFive(someNumber) {
   //In this example, let's say I want my function, addFive, to add 5 to
   //any number I pass in (someNumber), but only IF the number is greater
   //than zero:
-  let result
+  let result;
   if (someNumber > 0) {
     result = someNumber + 5;
   }
   //at the end, if I want my function to return something, I need to state it:
-  return result
+  return result;
 }
 
-//once our function is declared, we can call addFive, passing in values 
+//once our function is declared, we can call addFive, passing in values
 //as arguments:
 
 addFive(10);
@@ -74,13 +74,13 @@ addFive(-5);
 //=> undefined
 
 addFive(addFive(5));
-//=> 15!! In this case, the return value of addFive(5), 10, is passed in 
+//=> 15!! In this case, the return value of addFive(5), 10, is passed in
 //as the argument to the outer addFive, returning 15
 ```
 
 So, looking back at our test example, `scuberGreetingForFeet(199)` is calling
 the function `scuberGreetingForFeet`, and passing in the value `199` as the
-argument.  When we write this function, we need to write the logic inside the
+argument. When we write this function, we need to write the logic inside the
 curly braces to pass our tests and return the result:
 
 ```js
@@ -109,18 +109,18 @@ problem we are solving.
 
 There are three functions that have been declared for you. You will need to fill in the following code:
 
-* `scuberGreetingForFeet()` — Use `if` and `else if` statements to return the
-correct greeting based on the distance the passenger desires to travel.
-* `ternaryCheckCity()` — Use a ternary operator to return the correct response
-based on the desired destination of the passenger.
-* `switchOnCharmFromTip()` — Use a `switch` statement to return a different
-response based on the generosity of the passenger's tip.
+- `scuberGreetingForFeet()` — Use `if` and `else if` statements to return the
+  correct greeting based on the distance the passenger desires to travel.
+- `ternaryCheckCity()` — Use a ternary operator to return the correct response
+  based on the desired destination of the passenger.
+- `switchOnCharmFromTip()` — Use a `switch` statement to return a different
+  response based on the generosity of the passenger's tip.
 
-***NOTE***: Beware a gotcha! In JavaScript, you cannot express the concept of
+**_NOTE_**: Beware a gotcha! In JavaScript, you cannot express the concept of
 'between' in the following way:
 
 ```js
-2 < 5 < 4
+2 < 5 < 4;
 // => true
 ```
 
